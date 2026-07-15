@@ -44,7 +44,7 @@ footer{text-align:center;color:#999;font-size:12px;margin-top:48px;padding-top:1
 <li><strong>Purchase Records:</strong> When you make an in-app purchase, Google Play and RevenueCat process and store transaction records in accordance with their respective privacy policies.</li>
 <li><strong>Firebase Authentication and App Check:</strong> Haventory uses Firebase anonymous authentication and Play Integrity-backed App Check tokens to authenticate AI requests, protect backend services, enforce usage limits, and reduce fraud or abuse. These services create technical identifiers associated with the app installation and may process device or app-integrity signals.</li>
 <li><strong>Firebase Analytics and Crash Reporting:</strong> We use Firebase Analytics and Crashlytics to collect technical usage, device, performance, and crash information such as app version, device model, operating-system version, screens or features used, and diagnostic events. We use this information to operate, secure, and improve the App; it is not used by Haventory to build an advertising profile.</li>
-<li><strong>AI Smart Scan:</strong> If you choose AI Smart Scan, the selected room images, OCR-derived brand or model hints, and any scan hints you enter are transmitted over encrypted connections to Haventory backend services on Google Cloud and then to Google's Gemini API for processing. Images are processed for the requested scan and are not stored by Haventory as part of your cloud inventory. We do not use scan images for advertising or resale, or arrange human review unless you separately provide content for support.</li>
+<li><strong>AI Smart Scan:</strong> If you choose AI Smart Scan, the selected room images, OCR-derived brand or model hints, and any scan hints you enter are transmitted over encrypted connections to Haventory's secure backend services and then to Google's AI services for processing. Images are processed for the requested scan and are not stored by Haventory as part of your cloud inventory. We do not use scan images for advertising or resale, or arrange human review unless you separately provide content for support.</li>
 <li><strong>AI Usage and Entitlement Records:</strong> To enforce scan limits, subscriptions, credit balances, fraud controls, and cost caps, Haventory backend services store Firebase user IDs, entitlement tier, credit and quota counters, request timestamps, estimated AI cost, and limited RevenueCat event metadata. To prevent duplicate provider charges, AI result records and non-reversible image hashes may be cached for up to 30 days; the cached record can include the AI-generated item drafts but not the submitted image itself.</li>
 <li><strong>Barcode Lookup:</strong> If you use barcode lookup, barcode values may be sent to a third-party product lookup service to retrieve product details.</li>
 </ul>
@@ -71,11 +71,8 @@ footer{text-align:center;color:#999;font-size:12px;margin-top:48px;padding-top:1
 <h2>3. Third-Party Services</h2>
 <p>Haventory integrates with the following third-party services, each governed by their own privacy policies:</p>
 <ul>
-<li><strong>Google Play Billing:</strong> for processing purchases (<a href="https://policies.google.com/privacy">Google Privacy Policy</a>)</li>
-<li><strong>RevenueCat:</strong> for subscription management (<a href="https://www.revenuecat.com/privacy/">RevenueCat Privacy Policy</a>)</li>
-<li><strong>Google Firebase:</strong> for analytics, crash reporting, authentication, App Check, and AI-related services (<a href="https://firebase.google.com/support/privacy">Firebase Privacy Policy</a>)</li>
-<li><strong>Google Cloud Run / Firestore:</strong> for backend AI request routing, quota enforcement, usage records, and anti-abuse controls (<a href="https://policies.google.com/privacy">Google Privacy Policy</a>)</li>
-<li><strong>Google Gemini API:</strong> for optional AI Smart Scan image processing and item draft generation (<a href="https://policies.google.com/privacy">Google Privacy Policy</a>)</li>
+<li><strong>Google LLC:</strong> for payment processing (Google Play Billing), analytics, crash reporting, authentication, app-integrity verification, and secure cloud processing of optional AI scans, including AI image analysis (<a href="https://policies.google.com/privacy">Google Privacy Policy</a>, <a href="https://firebase.google.com/support/privacy">Firebase Privacy Policy</a>)</li>
+<li><strong>RevenueCat, Inc.:</strong> for subscription and entitlement management (<a href="https://www.revenuecat.com/privacy/">RevenueCat Privacy Policy</a>)</li>
 <li><strong>UPCItemDB:</strong> for optional barcode product lookups (<a href="https://www.upcitemdb.com/privacy">UPCItemDB Privacy Policy</a>)</li>
 </ul>
 
@@ -100,7 +97,7 @@ footer{text-align:center;color:#999;font-size:12px;margin-top:48px;padding-top:1
 <li>Automatic Android cloud backup and device-transfer restore are disabled so an inventory cannot be restored without its attached proof files.</li>
 <li>We do not transmit your complete manually entered inventory database to our own servers. Optional features such as AI Smart Scan, barcode lookup, purchases, analytics, crash reporting, and backend quota enforcement may involve the third-party services and Haventory backend records described above.</li>
 <li>Backend records are designed to support entitlement, quota, fraud-prevention, cost-control, and diagnostic functions. They are not intended to serve as a backup of your inventory.</li>
-<li>AI backend requests use encrypted HTTPS connections, Firebase Authentication, and Play Integrity-backed App Check verification. Server-side authorization, quota controls, spend limits, and restricted database rules are used to reduce unauthorized access and abuse.</li>
+<li>AI backend requests use encrypted HTTPS connections, Firebase Authentication, and Play Integrity-backed App Check verification. Server-side authorization, usage limits, and anti-abuse controls are used to reduce unauthorized access and abuse.</li>
 <li>While we implement reasonable security measures, <strong>no method of electronic storage is 100% secure</strong>. You are responsible for maintaining the security of your device and backup files.</li>
 </ul>
 
